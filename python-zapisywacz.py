@@ -4,7 +4,8 @@ import requests
 from datetime import datetime
 import re
 
-pattern = ".*\[\sOK\s\].*"
+patternTrex = ".*\[\sOK\s\].*"
+patternGminer = ".*Accepted.*"
 
 def doPOST(id):
 	url = 'https://mining.mateu.us/share?id='+str(id)
@@ -23,7 +24,7 @@ if __name__ == "__main__":
 	with open(datestring+'.log', 'wb') as f:  # replace 'w' with 'wb' for Python 3
 		process = subprocess.Popen(sys.argv[1], stdout=subprocess.PIPE)
 		for line in process.stdout:  # replace '' with b'' for Python 3
-			if re.match(pattern, str(line)):
+			if (re.match(patternTrex, str(line)) or re.match(patternGminer, str(line))):
 				doPOST(sys.argv[2])
-			sys.stdout.write(str(line))
+			print(line)
 			f.write(line)
