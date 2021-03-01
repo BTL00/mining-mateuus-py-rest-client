@@ -1,5 +1,5 @@
 # mining-zapisywacz-py-rest-client
-A python script that sends does a REST api request when share is found. Useful if you want to divide profits with someone while mining to the same wallet. 
+A python script that does a REST API request when a share is found. Useful if you want to divide profits with someone while mining to the same wallet. 
 
 ## Confirmed versions:
 - trex-0.19.5 with cuda 11.1
