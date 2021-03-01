@@ -5,7 +5,7 @@ from datetime import datetime
 import re
 
 patternTrex = ".*\[\sOK\s\].*"
-patternGminer = ".*Accepted.*"
+patternGminer = ".*accepted.*"
 
 def doPOST(id):
 	url = 'https://mining.mateu.us/share?id='+str(id)
