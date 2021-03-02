@@ -13,7 +13,7 @@ A python script that does a REST API request when a share is found. Useful if yo
 
 ## Usage
 ```call activate zapisywacz
-python python-zapisywacz.py "{trex or gminer starting command}" {user_id}
+python python-zapisywacz.py "{trex or gminer starting command}" {user_id} "{url}" "{pass}"
 ```
 
 ## Can be used with
